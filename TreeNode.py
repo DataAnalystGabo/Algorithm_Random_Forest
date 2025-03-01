@@ -11,6 +11,7 @@ class TreeNode:
         - left: nodo hijo izquierdo.
         - right: nodo hijo derecho.
         - value: clase predicha si el nodo es hoja.
+
         """
         self.feature_index = feature_index
         self.threshold = threshold
