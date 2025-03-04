@@ -1,10 +1,26 @@
-"""
+import numpy as np
+from tree_decision.entropy import entropy
+
+
+def find_best_split(X: np.ndarray, y: np.ndarray) -> float:
+    """
     Objetivo:
     ----------
-    Determinar la feature (característica) y el threshold (umbral) que generan la división más homogénea 
+    Determinar la feature (característica) y el threshold (umbral) que generan la división más homogénea
     posible dentro del dataset, utilizando el criterio de entropía.
 
-    Pasos del algoritmo:
+    Parámetros:
+    -----------
+    - X (np.ndarray): Vector multidimensional que contiene las feature del conjunto de datos.
+    - y (np.ndarray): Vector unidimensional que contiene las etiquetas o valores categóricos del conjunto de datos.
+
+    Retorna:
+    --------
+    - int: Índice de la característica (columna) seleccionada para realizar el corte (`best_feature`).
+    - numpy.float64: valor del umbral de corte (`best_threshold`).
+    - numpy.float64: valor de la entropía ponderada (`best_entropy`).
+
+    Algoritmo:
     ---------------------
     1. Inicializa `best_feature`, `best_threshold` y `best_entropy` con valores nulos o infinitos.
     2. Itera sobre cada característica del conjunto de datos `X`.
@@ -15,17 +31,11 @@
         - `right_y`: Contiene las etiquetas donde la característica es mayor al umbral.
     6. Calcula la entropía de ambos subconjuntos (`left_y` y `right_y`).
     7. Calcula la entropía total ponderada en función del tamaño relativo de cada subconjunto.
-    8. Si la entropía total calculada es menor que la mejor encontrada hasta el momento, 
+    8. Si la entropía total calculada es menor que la mejor encontrada hasta el momento,
     actualiza `best_feature`, `best_threshold` y `best_entropy`.
-    9. Devuelve la mejor característica (`best_feature`), el mejor umbral (`best_threshold`) y la 
+    9. Devuelve la mejor característica (`best_feature`), el mejor umbral (`best_threshold`) y la
     entropía mínima (`best_entropy`).
-"""
-
-import numpy as np
-from tree_decision.entropy import entropy
-
-
-def find_best_split(X, y) -> float:
+    """
     best_feature = None
     best_threshold = None
     best_entropy = float("inf")

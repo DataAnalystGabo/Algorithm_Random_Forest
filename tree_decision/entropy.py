@@ -16,7 +16,7 @@ def entropy(y: np.ndarray) -> float:
     --------
     - float: Valor de la entropía, en base 2, del conjunto `y`.
 
-    Detalles del cálculo:
+    Algoritmo:
     ---------------------
     1. Se obtienen los valores únicos y sus frecuencias en `y`.
     2. Se calculan las probabilidades relativas de cada valor único.
