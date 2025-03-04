@@ -1,6 +1,11 @@
 class TreeNode:
     def __init__(
-        self, feature_index=None, threshold=None, left=None, right=None, value=None
+        self,
+        feature_index: int = None,
+        threshold: float = None,
+        left=None,
+        right=None,
+        value: float = None,
     ):
         """
         Objetivo:
@@ -9,11 +14,11 @@ class TreeNode:
 
         Parámetros:
         -----------
-        - feature_index (int, opcional): Índice de la característica utilizada para dividir el nodo. Si el nodo es una hoja, este valor es `None`.
-        - threshold (float, opcional): Umbral de división para la característica seleccionada. Si el nodo es una hoja, este valor es `None`.
-        - left (TreeNode, opcional): Referencia al nodo hijo izquierdo. Contiene las observaciones con valores menores o iguales al umbral.
-        - right (TreeNode, opcional): Referencia al nodo hijo derecho. Contiene las observaciones con valores mayores al umbral.
-        - value (int o float, opcional): Valor predicho si el nodo es una hoja. En un nodo de decisión, este valor es `None`.
+        - `feature_index` (int, opcional): Índice de la característica utilizada para dividir el nodo. Si el nodo es una hoja, este valor es `None`.
+        - `threshold` (float, opcional): Umbral de división para la característica seleccionada. Si el nodo es una hoja, este valor es `None`.
+        - `left` (TreeNode, opcional): Referencia al nodo hijo izquierdo. Contiene las observaciones con valores menores o iguales al umbral.
+        - `right` (TreeNode, opcional): Referencia al nodo hijo derecho. Contiene las observaciones con valores mayores al umbral.
+        - `value` (float, opcional): Valor predicho si el nodo es una hoja. En un nodo de decisión, este valor es `None`.
 
         Descripción:
         ------------

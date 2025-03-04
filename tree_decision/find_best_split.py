@@ -11,8 +11,8 @@ def find_best_split(X: np.ndarray, y: np.ndarray) -> float:
 
     Parámetros:
     -----------
-    - X (np.ndarray): Vector multidimensional que contiene las features del conjunto de datos.
-    - y (np.ndarray): Vector unidimensional que contiene las etiquetas o valores categóricos del conjunto de datos.
+    - `X` (np.ndarray): Vector multidimensional que contiene las features del conjunto de datos.
+    - `y` (np.ndarray): Vector unidimensional que contiene las etiquetas o valores categóricos del conjunto de datos.
 
     Retorna:
     --------
