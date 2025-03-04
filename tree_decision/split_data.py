@@ -3,7 +3,7 @@ import numpy as np
 
 def split_data(
     X: np.ndarray, y: np.ndarray, feature: int, threshold: float
-) -> np.array:
+) -> np.ndarray:
     """
     Objetivo:
     ----------

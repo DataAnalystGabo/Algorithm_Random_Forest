@@ -11,7 +11,7 @@ def find_best_split(X: np.ndarray, y: np.ndarray) -> float:
 
     Parámetros:
     -----------
-    - X (np.ndarray): Vector multidimensional que contiene las feature del conjunto de datos.
+    - X (np.ndarray): Vector multidimensional que contiene las features del conjunto de datos.
     - y (np.ndarray): Vector unidimensional que contiene las etiquetas o valores categóricos del conjunto de datos.
 
     Retorna:
@@ -36,6 +36,7 @@ def find_best_split(X: np.ndarray, y: np.ndarray) -> float:
     9. Devuelve la mejor característica (`best_feature`), el mejor umbral (`best_threshold`) y la
     entropía mínima (`best_entropy`).
     """
+
     best_feature = None
     best_threshold = None
     best_entropy = float("inf")
