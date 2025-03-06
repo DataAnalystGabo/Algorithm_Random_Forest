@@ -30,6 +30,15 @@ def build_tree(X: np.ndarray, y: np.ndarray, depth=0, max_depth=5) -> TreeNode:
     """
 
     if len(set(y)) == 1 or depth == max_depth:
+        """
+        Crea un nodo hoja con la clase más frecuente en `y`.
+
+        - `set(y)`: Obtiene las clases únicas en `y`.
+        - `list(y).count`: Cuenta la frecuencia de cada clase.
+        - `max(..., key=...)`: Retorna la clase con mayor frecuencia.
+
+        Devuelve un objeto `TreeNode` con el valor de la clase predominante en el subconjunto de datos.
+        """
         return TreeNode(value=max(set(y), key=list(y).count))
 
     best_feature, best_threshold, _ = find_best_split(X, y)
